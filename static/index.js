@@ -58,7 +58,7 @@ let refreshSizeTime;
 
 function refreshSize() {
     clearTimeout(refreshSizeTime);
-    refreshSizeTime = setTimeout(_refreshSize, 200);
+    refreshSizeTime = setTimeout(_refreshSize, 400);
 }
 
 function _refreshSize() {
@@ -223,7 +223,7 @@ function refreshGameLayer(box, loop, offset) {
             setTimeout(function () {
                 box.style.display = 'block';
             }, 100);
-        }, 200);
+        }, 400);
     } else {
         box.y = 0;
         box.style[transform] = 'translate3D(0,' + box.y + 'px,0)';
