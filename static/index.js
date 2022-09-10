@@ -339,9 +339,9 @@ function backBtn() {
 function shareText(score) {
     let date2 = new Date();
     deviation_time = (date2.getTime() - _date1.getTime())
-    if (deviation_time > 923000) {
+    /*if (deviation_time > 923000) {
         return '倒计时多了' + ((deviation_time / 1000) - 80).toFixed(2) + "s";
-    }
+    }*/
     SubmitResults();
     if (score <= 30) return '鸡你太美';
     if (score <= 60) return '鸡你太太美';
