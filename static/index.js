@@ -58,7 +58,7 @@ let refreshSizeTime;
 
 function refreshSize() {
     clearTimeout(refreshSizeTime);
-    refreshSizeTime = setTimeout(_refreshSize, 400);
+    refreshSizeTime = setTimeout(_refreshSize, 800);
 }
 
 function _refreshSize() {
@@ -124,7 +124,7 @@ function gameRestart() {
     _gameScore = 0;
     _gameOver = false;
     _gameStart = false;
-    _gameTimeNum = 20;
+    _gameTimeNum = 80;
     GameTimeLayer.innerHTML = creatTimeText(_gameTimeNum);
     countBlockSize();
     refreshGameLayer(GameLayer[0]);
@@ -223,7 +223,7 @@ function refreshGameLayer(box, loop, offset) {
             setTimeout(function () {
                 box.style.display = 'block';
             }, 100);
-        }, 400);
+        }, 800);
     } else {
         box.y = 0;
         box.style[transform] = 'translate3D(0,' + box.y + 'px,0)';
@@ -340,7 +340,7 @@ function shareText(score) {
     let date2 = new Date();
     deviation_time = (date2.getTime() - _date1.getTime())
     if (deviation_time > 23000) {
-        return '倒计时多了' + ((deviation_time / 1000) - 20).toFixed(2) + "s";
+        return '倒计时多了' + ((deviation_time / 1000) - 80).toFixed(2) + "s";
     }
     SubmitResults();
     if (score <= 30) return '鸡你太美';
